@@ -5,6 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "test",
+    "start": "nodemon server/server.js",
+    "dev": "nodemon server/server.js & webpack-dev-server --open",
     "build": "webpack"
   },
   "repository": {
@@ -31,6 +33,7 @@
     "css-loader": "^3.3.2",
     "express": "^4.17.1",
     "file-loader": "^5.0.2",
+    "nodemon": "^2.0.2",
     "pg": "^7.14.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
