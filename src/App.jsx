@@ -26,6 +26,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="watch-list">
+        <h1>APPPPPPPPP</h1>
         {watchList.forEach((elem, index) => {
           <Media key={index} index={index} media={elem} />
         })}
