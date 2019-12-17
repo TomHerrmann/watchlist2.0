@@ -24,7 +24,21 @@ module.exports = {
     ],
   },
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/dist/',
+    filename: 'bundle.js',
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'public/'),
+    port: 8080,
+    publicPath: 'http://localhost:8080/dist/',
+    hotOnly: true,
+    // sends all endpoint requests from 8080 to 3000
+    proxy: {
+      '/': {
+        target: 'http://localhost:3000/',
+        changeOrigin: true,
+      },
+    },
   },
 }
