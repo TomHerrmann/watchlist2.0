@@ -1,13 +1,13 @@
 import React, { Component, useState } from 'react';
 
-// const watchList = ({ title, index }) => {
-//   <div className="media">
-//     {media.text}
-//   </div>
-// }
+const watchList = ({ title, index }) => {
+  <div className="media">
+    <h2>watchList</h2>
+  </div>
+}
 
 const App = () => {
-  const [watchList, setWatchList] = React.useState([
+  const { watchList, setWatchList } = React.useState([
     {
       text: 'test react hooks',
       isComple: false,
@@ -26,9 +26,9 @@ const App = () => {
     <div className="app">
       <div className="watch-list">
         <h1>APPPPPPPPP</h1>
-        {/* {watchList.forEach((elem, index) => {
+        {watchList.forEach((elem, index) => {
           <Media key={index} index={index} media={elem} />
-        })} */}
+        })}
       </div>
     </div>
   )
