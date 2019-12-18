@@ -1,4 +1,5 @@
 import React, { Component, useState } from 'react';
+import './style.css'
 
 const watchList = ({ title, index }) => {
   <div className="media">
