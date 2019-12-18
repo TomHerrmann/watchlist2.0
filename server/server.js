@@ -10,4 +10,8 @@ app.use(cookieParser());
 
 app.use(express.static(path.resolve(__dirname, '../dist')));
 
+app.get('/', (req, res) => {
+  res.status(200).send(path.resolve(__dirname, '../dist/index.html'))
+})
+
 app.listen(3000, () => console.log('Listneing on 3000'))
