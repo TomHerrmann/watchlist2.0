@@ -7,7 +7,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    media: [Media]
+    getMedia: [Media]
   }
 `
 
@@ -24,7 +24,7 @@ const media = [
 
 const resolvers = {
   Query: {
-    media: () => media,
+    getMedia: () => media,
   },
 };
 
