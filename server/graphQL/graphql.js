@@ -1,4 +1,15 @@
-import { ApolloServer } from 'apollo-server';
+const { ApolloServer, gql } = require('apollo-server');
+
+const typeDefs = gql`
+  type Media {
+    title: String
+    year: Int
+  }
+
+  type Query {
+    media: [Media]
+  }
+`
 
 const media = [
   {
@@ -18,7 +29,7 @@ const resolvers = {
 };
 
 const server = new ApolloServer({
-  typeDefs: 'schema.graphql',
+  typeDefs,
   resolvers
 });
 
