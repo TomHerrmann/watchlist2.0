@@ -1,0 +1,8 @@
+  type Media {
+    title: String
+    year: Int
+  }
+
+  type Query {
+    media: [Media]
+  }
