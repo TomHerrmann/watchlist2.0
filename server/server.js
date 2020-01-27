@@ -10,6 +10,10 @@ app.use(cookieParser());
 
 app.use(express.static(path.resolve(__dirname, '../dist')));
 
+app.get('/userWatchlist', (req, res) => {
+
+})
+
 app.get('/', (req, res) => {
   res.status(200).send(path.resolve(__dirname, '../dist/index.html'))
 })
